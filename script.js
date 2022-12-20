@@ -1,24 +1,29 @@
 async function getJsonPromise () {
-    try {
     const response = await fetch("https://thatsthespir.it/api");
     const json = await response.json();
     return json
+}
+
+async function displayJson (){
+    try {
+    let jsonData = await getJsonPromise();
+    let blockquote = document.querySelector('blockquote');
+    blockquote.textContent = jsonData.quote;
+    let img = document.getElementById('photo');
+    img.src = jsonData.photo;
+    let author = document.querySelector('figcaption');
+    author.textContent = jsonData.author;
+    console.log(jsonData);
     }
     catch(error) {
         console.log('Erreur : impossible de récupérer les données')
     }
 }
 
-async function displayJson (){
-    let jsonData = await getJsonPromise();
-    
-
-
-
-    console.log(jsonData.quote);
-}
-
 displayJson();
+
+let button = document.querySelector('button');
+button.addEventListener('click',displayJson);
 
 //const jsonPromise = getJsonPromise();
 //jsonPromise.then(data => console.log(data));
