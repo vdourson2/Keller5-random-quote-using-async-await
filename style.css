@@ -1,1 +1,34 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.resultat {
+  width: 60vw;
+  height: 50vh;
+  margin: 15vh auto;
+  padding: 5vw;
+  text-align: center;
+}
+.resultat__quote {
+  font-family: satisfy, cursive;
+  font-size: 2em;
+}
+.resultat__img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 3vh auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.resultat__figcaption {
+  color: gray;
+  font-size: 1.2em;
+}
+.resultat__button {
+  margin: 5vw;
+  padding: 0.3vw;
+}/*# sourceMappingURL=style.css.map */
